@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --color-fundo: #f5ede8;
+  --color-dourado: #8b6914;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background-color: white;
+}
