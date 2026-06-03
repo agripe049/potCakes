@@ -9,7 +9,7 @@ import {
   Menu,
   X
 } from 'lucide-react';
-import { div, li } from 'framer-motion/client';
+
 
 const navLinks = [
   { href: '#sobre', label: 'Sobre' },
@@ -51,7 +51,7 @@ function App() {
 
         {open && (
           <div className='md:hidden'>
-            <div className='fixed bg-black/60'
+            <div className='fixed left-0 top-0 h-full w-[calc(100%-320px)] bg-black/60'
               onClick={() => setOpen(false)}>
               <div className='fixed right-0 top-0 h-full w-80 bg-rose-100 border-1 border-white/10 p-6'>
                 <div className='flex items-center justify-between mb-2'>
@@ -66,7 +66,7 @@ function App() {
                 </div>
                 <div className='flex flex-col gap-4 bg-rose-100 p-4 w-90'>
                   {navLinks.map((l) => (
-                    <a key={l.href} href={l.href} className='text-slate-50'>
+                    <a key={l.href} href={l.href} className='text-[#523a00]'>
                       {l.label}
                     </a>
                   ))}
@@ -83,7 +83,7 @@ function App() {
           <motion.h1 initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className='text-6xl font-extrabold text-[#b8860b]'
+            className='text-4xl md:text-6xl font-extrabold text-[#b8860b]'
           >
             Doces que contam {""} <br />
             <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#8b6914] to-[#fcc53a]'>
@@ -103,7 +103,7 @@ function App() {
           <motion.div initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1 }}
-            className='mt-8 flex flex-row gap-3'
+            className='mt-8 flex flex-col md:flex-row gap-3'
           >
             <a href="#" className='inline-flex items-center justify-center gap-2 rounded-2xl text-white bg-rose-400 px-6 py-3 font-medium hover:bg-rose-500 transition cursor-pointer'>
               Ver Menu
@@ -125,7 +125,7 @@ function App() {
                   {i === 1 && <Candy className='text-[#b8860b]' />}
                   {i === 2 && <Cookie className='text-[#b8860b]' />}
                   {i === 3 && <IceCreamBowl className='text-[#b8860b]' />}
-                  <div className='font-semibold text-[#523a00] text-sm md:text-bsa'>
+                  <div className='font-semibold text-[#523a00] text-sm md:text-base'>
                     {label}
                   </div>
                 </div>
