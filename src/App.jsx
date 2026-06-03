@@ -77,7 +77,7 @@ function App() {
         )}
       </header>
 
-      {/* Hero */}
+      {/* Heroo */}
       <section className='relative overflow-hidden'>
         <div className='mx-auto max-w-6xl px-4 py-20 relative'>
           <motion.h1 initial={{ opacity: 0, y: 20 }}
@@ -125,7 +125,7 @@ function App() {
                   {i === 1 && <Candy className='text-[#b8860b]' />}
                   {i === 2 && <Cookie className='text-[#b8860b]' />}
                   {i === 3 && <IceCreamBowl className='text-[#b8860b]' />}
-                  <div className='font-semibold text-[#523a00]'>
+                  <div className='font-semibold text-[#523a00] text-sm md:text-bsa'>
                     {label}
                   </div>
                 </div>
