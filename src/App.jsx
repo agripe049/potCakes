@@ -131,9 +131,17 @@ function App() {
                 </div>
               </div>
             ))}
-
           </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className='flex-1 flex justify-center w-full'
+        >
+          <img src="" alt="Bolo Pot Cakes" />
+        </motion.div>
 
       </section>
     </div>
