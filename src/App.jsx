@@ -10,6 +10,8 @@ import {
   X
 } from 'lucide-react';
 
+import mine from '../src/assets/mine.jpeg'
+
 
 const navLinks = [
   { href: '#sobre', label: 'Sobre' },
@@ -39,7 +41,6 @@ function App() {
             <a className='inline-flex items-center justify-center gap-2 rounded-2xl text-white bg-rose-400 px-6 py-3 font-medium hover:bg-rose-500 transition cursor-pointer'>
               Fazer pedido
             </a>
-
           </nav>
 
 
@@ -79,70 +80,103 @@ function App() {
 
       {/* Heroo */}
       <section className='relative overflow-hidden'>
-        <div className='mx-auto max-w-6xl px-4 py-20 relative'>
-          <motion.h1 initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className='text-4xl md:text-6xl font-extrabold text-[#b8860b]'
-          >
-            Doces que contam {""} <br />
-            <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#8b6914] to-[#fcc53a]'>
-              histórias de amor
-            </span>
-          </motion.h1>
+        <div className='mx-auto max-w-6xl px-4 py-20 relative flex flex-col md:flex-row items-center gap-12'>
 
-          <motion.p initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 1 }}
-            className='mt-4 text-[#523a00] max-w-2xl font-serif'
-          >
-            Bolos, doces, cookies, empadinhas, mini vulcão natural, caseiros,
-            tortas doces e salgadas e sobremesas sofisticadas.
-          </motion.p>
+          <div className='flex-1 max-w-xl'>
+            <motion.h1 initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              className='text-4xl md:text-5xl font-extrabold text-[#b8860b] max-w-lg'
+            >
+              Doces que contam {""} <br />
+              <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#8b6914] to-[#fcc53a]'>
+                histórias de amor
+              </span>
+            </motion.h1>
 
-          <motion.div initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 1 }}
-            className='mt-8 flex flex-col md:flex-row gap-3'
-          >
-            <a href="#" className='inline-flex items-center justify-center gap-2 rounded-2xl text-white bg-rose-400 px-6 py-3 font-medium hover:bg-rose-500 transition cursor-pointer'>
-              Ver Menu
-            </a>
-            <a href="#" className='inline-flex items-center justify-center gap-2 rounded-2xl text-[#523a00] px-6 py-3 font-medium border-2 border-[#b8870b7c] hover:bg-white/30 transition cursor-pointer'>
-              Fazer pedido
-            </a>
-          </motion.div>
+            <motion.p initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 1 }}
+              className='mt-4 text-[#523a00] font-serif'
+            >
+              Bolos, doces, cookies, empadinhas, mini vulcão natural, caseiros,
+              tortas doces e salgadas e sobremesas sofisticadas.
+            </motion.p>
 
-          <motion.div initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 1 }}
-            className='mt-14 flex flex-col md:flex-row gap-3'
+            <motion.div initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 1 }}
+              className='mt-8 flex flex-col md:flex-row gap-3'
+            >
+              <a href="#" className='inline-flex items-center justify-center gap-2 rounded-2xl text-white bg-rose-400 px-6 py-3 font-medium hover:bg-rose-500 transition cursor-pointer'>
+                Ver Menu
+              </a>
+              <a href="#" className='inline-flex items-center justify-center gap-2 rounded-2xl text-[#523a00] px-6 py-3 font-medium border-2 border-[#b8870b7c] hover:bg-white/30 transition cursor-pointer'>
+                Fazer pedido
+              </a>
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 1 }}
+              className='mt-14 flex flex-row flex-wrap md:flex-row gap-3'
+            >
+              {["Bolos & Tortas", "Doces", "Cookies", "Sobremesas"].map((label, i) => (
+                <div key={label} className='rounded-2xl border border-[#b8870b7c] bg-white/30 gap-2 px-2 py-2 md:px-4 md:py-2 font-medium transition'>
+                  <div className='flex items-center gap-2 md:gap-4'>
+                    {i === 0 && <Cake className='text-[#b8860b] size-3 md:size-5' />}
+                    {i === 1 && <Candy className='text-[#b8860b] size-3 md:size-5' />}
+                    {i === 2 && <Cookie className='text-[#b8860b] size-3 md:size-5' />}
+                    {i === 3 && <IceCreamBowl className='text-[#b8860b] size-3 md:size-5' />}
+                    <div className='font-semibold text-[#523a00] text-xs md:text-base'>
+                      {label}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+
+
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className='flex-1 flex justify-center'
           >
-            {["Bolos & Tortas", "Doces", "Cookies", "Sobremesas"].map((label, i) => (
-              <div key={label} className='rounded-2xl border border-[#b8870b7c] bg-white/30 gap-2 px-3 py-2 md:px-6 md:py-3 font-medium transition'>
-                <div className='flex items-center gap-2 md:gap-4'>
-                  {i === 0 && <Cake className='text-[#b8860b]' />}
-                  {i === 1 && <Candy className='text-[#b8860b]' />}
-                  {i === 2 && <Cookie className='text-[#b8860b]' />}
-                  {i === 3 && <IceCreamBowl className='text-[#b8860b]' />}
-                  <div className='font-semibold text-[#523a00] text-sm md:text-base'>
-                    {label}
+
+            <div className='w-full max-w-sm rounded-3xl overflow-hidden shadow-lg bg-white'>
+
+              <div className='relative'>
+                {/* Imagem */}
+                <img
+                  src={mine}
+                  alt="Bolo Pot Cakes"
+                  className='w-full object-cover aspect-square'
+                />
+
+                {/* Badge */}
+                <div className='absolute bottom-4 right-4 bg-white rounded-2xl px-4 py-2 flex items-center gap-2 shadow-md'>
+                  <Cake className='text-rose-400 size-4' />
+                  <div>
+                    <p className='text-[#523a00] font-semibold text-sm'>100% Artesanal</p>
+                    <p className='text-[#b8860b] text-xs'>Feito com amor</p>
                   </div>
                 </div>
               </div>
-            ))}
+
+
+              {/* Area branca embaixo da imagem */}
+              <div className='px-5 py-4 flex items-center justify-between'>
+                <p className='text-[#523a00] font-semibold text-sm'>Bolos personalizados</p>
+                <span className='text-rose-400 border border-rose-300 rounded-full px-3 py-1 text-xs cursor-pointer hover:bg-rose-50 transition'>
+                  + Fazer Pedido
+                </span>
+              </div>
+            </div>
           </motion.div>
+
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className='flex-1 flex justify-center w-full'
-        >
-          <img src="" alt="Bolo Pot Cakes" />
-        </motion.div>
-
       </section>
     </div>
   )
