@@ -1,4 +1,3 @@
-import './App.css'
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -10,7 +9,7 @@ import {
   X
 } from 'lucide-react';
 
-import mine from '../src/assets/mine.jpeg'
+import mine from './assets/mine.jpeg'
 
 
 const navLinks = [
