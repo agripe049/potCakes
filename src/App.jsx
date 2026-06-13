@@ -9,7 +9,7 @@ import {
   X
 } from 'lucide-react';
 
-import mine from './assets/mine.jpeg';
+import mine from './assets/Mine.jpeg';
 
 
 const navLinks = [
