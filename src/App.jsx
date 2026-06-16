@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 
 import mine from './assets/Mine.jpeg';
+import ovoKinder from './assets/ovoKinder.jpeg';
 
 
 const navLinks = [
@@ -25,7 +26,7 @@ function App() {
 
   return (
     <div className='bg-rose-100 text-[#b8860b]'>
-      <header className='sticky top-0 z-40 border-b border-white/5'>
+      <header className='sticky top-0 z-40 border-b border-rose-200 bg-white/80 backdrop-blur-sm'>
         <div className='mx-auto max-w-6xl px-4 py-4 flex items-center justify-between'>
           <a href="#" className='flex items-center gap-2'>
             <span className='font-bold tracking-tight'>Pot Cakes Confeitaria</span>
@@ -110,7 +111,7 @@ function App() {
               <a href="#" className='inline-flex items-center justify-center gap-2 rounded-2xl text-white bg-rose-400 px-6 py-3 font-medium hover:bg-rose-500 transition cursor-pointer'>
                 Ver Menu
               </a>
-              <a href="#" className='inline-flex items-center justify-center gap-2 rounded-2xl text-[#523a00] px-6 py-3 font-medium border-2 border-[#b8870b7c] hover:bg-white/30 transition cursor-pointer'>
+              <a href="#" className='inline-flex items-center justify-center gap-2 rounded-2xl text-[#523a00] px-6 py-3 font-medium border-2 border-[#b8870b7c] hover:bg-white/30 transition-all duration-300 cursor-pointer'>
                 Fazer pedido
               </a>
             </motion.div>
@@ -123,10 +124,10 @@ function App() {
               {["Bolos & Tortas", "Doces", "Cookies", "Sobremesas"].map((label, i) => (
                 <div key={label} className='rounded-2xl border border-[#b8870b7c] bg-white/30 gap-2 px-2 py-2 md:px-4 md:py-2 font-medium transition'>
                   <div className='flex items-center gap-2 md:gap-4'>
-                    {i === 0 && <Cake className='text-[#b8860b] size-3 md:size-5' />}
-                    {i === 1 && <Candy className='text-[#b8860b] size-3 md:size-5' />}
+                    {i === 0 && <Cake className='text-rose-400 size-3 md:size-5' />}
+                    {i === 1 && <Candy className='text-pink-400 size-3 md:size-5' />}
                     {i === 2 && <Cookie className='text-[#b8860b] size-3 md:size-5' />}
-                    {i === 3 && <IceCreamBowl className='text-[#b8860b] size-3 md:size-5' />}
+                    {i === 3 && <IceCreamBowl className='text-rose-300 size-3 md:size-5' />}
                     <div className='font-semibold text-[#523a00] text-xs md:text-base'>
                       {label}
                     </div>
@@ -155,7 +156,7 @@ function App() {
                 />
 
                 {/* Badge */}
-                <div className='absolute bottom-4 right-4 bg-white rounded-2xl px-4 py-2 flex items-center gap-2 shadow-md'>
+                <div className='absolute bottom-4 right-4 bg-white rounded-2xl px-2 py-2 flex items-center gap-2 shadow-md'>
                   <Cake className='text-rose-400 size-4' />
                   <div>
                     <p className='text-[#523a00] font-semibold text-sm'>100% Artesanal</p>
@@ -176,6 +177,73 @@ function App() {
           </motion.div>
 
         </div>
+      </section>
+
+
+
+      {/* Sobre */}
+      <section id='sobre' className='py-30 mt-15 bg-amber-50'>
+        <div className='mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center gap-12'>
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='flex-1 flex justify-center'
+          >
+            <img
+              src={ovoKinder}
+              alt="Ovo de Kinder"
+              className='w-full max-w-sm rounded-3xl object-cover aspect-square shadow-lg '
+            />
+          </motion.div>
+
+          {/* Texto a direita */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='flex-1 max-w-xl'
+          >
+            <span className='text-rose-400 font-medium text-sm uppercase tracking-widest'>
+              Nossa história
+            </span>
+
+            <h2 className='mt-2 text-3xl md:text-4xl font-extrabold text-[#b8860b]'>
+              Feito com amor, <br />
+              <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#8b6914] to-[#fcc53a]'>
+                entregue com carinho
+              </span>
+            </h2>
+
+            <p className='mt-4 text-[#523a00] font-serif leading-relaxed'>
+              A Pot Cakes nasceu do sonho de transformar momentos simples em memórias
+              doces. Cada bolo, cada docinho e cada cookie é preparado artesanalmente,
+              com ingredientes selecionados e muito cuidado em cada detalhe.
+            </p>
+
+            <p className='mt-3 text-[#523a00] font-serif leading-relaxed'>
+              Aqui, acreditamos que um bom doce tem o poder de aproximar pessoas e
+              tornar qualquer ocasião ainda mais especial.
+            </p>
+
+            {/*Números e conquistas */}
+            <div className='mt-8 grid grid-cols-3 gap-4'>
+              {[
+                {numero: "5+", label: "Anos de experiência"},
+                {numero: "400+", label: "Clientes satisfeitos"},
+                {numero: "100%", label: "Artesanal"},
+              ].map((item) => (
+                <div key={item.label} className='rounded-2xl border border-[#b8870b7c] bg-white/30 p-2  text-center'>
+                  <p className='text-2xl font-extrabold text-[#b8860b]'>{item.numero}</p>
+                  <p className='text-xs text-[#523a00] mt-1 font-serif'>{item.label}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+
       </section>
     </div>
   )
