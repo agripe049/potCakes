@@ -34,8 +34,13 @@ function App() {
 
           <nav className='hidden md:flex items-center gap-6 text-sm'>
             {navLinks.map((l) => (
-              <a key={l.href} href={l.href} className='text-[#b8860b] hover:text-[#fcc53a] text-[15px]'>
+              <a
+                key={l.href}
+                href={l.href}
+                className='relative text-[#b8860b] text-[15px] font-medium hover:text-[#fcc53a] transition-colors duration-300 group'
+              >
                 {l.label}
+                <span className='absolute -bottom-1 left-0 w-0 h-0.5 bg-[#fcc53a] transition-all duration-300 group-hover:w-full rounded-full' />
               </a>
             ))}
             <a className='inline-flex items-center justify-center gap-2 rounded-2xl text-white bg-rose-400 px-6 py-3 font-medium hover:bg-rose-500 transition cursor-pointer'>
@@ -57,9 +62,11 @@ function App() {
               <div className='fixed right-0 top-0 h-full w-80 bg-rose-100 border-1 border-white/10 p-6'>
                 <div className='flex items-center justify-between mb-2'>
                   <div className='flex items-center gap-2'>
-                    <span className='font-semibold'>
-                      Pot Cakes
-                    </span>
+                    <a href="#">
+                      <span className='font-semibold'>
+                        Pot Cakes
+                      </span>
+                    </a>
                   </div>
                   <button className='p-2 rounded-lg' onClick={() => setOpen(false)}>
                     <X className='size-5' />
@@ -231,9 +238,9 @@ function App() {
             {/*Números e conquistas */}
             <div className='mt-8 grid grid-cols-3 gap-4'>
               {[
-                {numero: "5+", label: "Anos de experiência"},
-                {numero: "400+", label: "Clientes satisfeitos"},
-                {numero: "100%", label: "Artesanal"},
+                { numero: "5+", label: "Anos de experiência" },
+                { numero: "400+", label: "Clientes satisfeitos" },
+                { numero: "100%", label: "Artesanal" },
               ].map((item) => (
                 <div key={item.label} className='rounded-2xl border border-[#b8870b7c] bg-white/30 p-2  text-center'>
                   <p className='text-2xl font-extrabold text-[#b8860b]'>{item.numero}</p>
