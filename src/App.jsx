@@ -26,15 +26,15 @@ function App() {
 
   return (
     <div className='bg-rose-100 text-[#b8860b]'>
-      <header className='sticky top-0 z-40 border-b border-rose-200 bg-white/80 backdrop-blur-sm'>
+      <header className='sticky top-0 z-40 border-b border-rose-200 bg-white/80'>
         <div className='mx-auto max-w-6xl px-4 py-4 flex items-center justify-between'>
           <a href="#" className='flex items-center gap-2'>
-            <span className='font-bold tracking-tight'>Pot Cakes Confeitaria</span>
+            <span className='text-lg font-bold tracking-tight'>Pot Cakes Confeitaria</span>
           </a>
 
           <nav className='hidden md:flex items-center gap-6 text-sm'>
             {navLinks.map((l) => (
-              <a key={l.href} href={l.href} className='hover:text-[#fcc53a] text-[15px]'>
+              <a key={l.href} href={l.href} className='text-[#b8860b] hover:text-[#fcc53a] text-[15px]'>
                 {l.label}
               </a>
             ))}
@@ -82,7 +82,7 @@ function App() {
       <section className='relative overflow-hidden'>
         <div className='mx-auto max-w-6xl px-4 py-20 relative flex flex-col md:flex-row items-center gap-12'>
 
-          <div className='flex-1 max-w-xl'>
+          <div className='flex-1 max-w-xl order-1'>
             <motion.h1 initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
@@ -106,7 +106,7 @@ function App() {
             <motion.div initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1 }}
-              className='mt-8 flex flex-col md:flex-row gap-3'
+              className='mt-8 flex flex-row md:flex-row gap-3'
             >
               <a href="#" className='inline-flex items-center justify-center gap-2 rounded-2xl text-white bg-rose-400 px-6 py-3 font-medium hover:bg-rose-500 transition cursor-pointer'>
                 Ver Menu
@@ -119,10 +119,10 @@ function App() {
             <motion.div initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1 }}
-              className='mt-14 flex flex-row flex-wrap md:flex-row gap-3'
+              className='mt-14 flex flex-row flex-wrap md:flex-row gap-2'
             >
               {["Bolos & Tortas", "Doces", "Cookies", "Sobremesas"].map((label, i) => (
-                <div key={label} className='rounded-2xl border border-[#b8870b7c] bg-white/30 gap-2 px-2 py-2 md:px-4 md:py-2 font-medium transition'>
+                <div key={label} className='rounded-2xl border border-[#b8870b7c] bg-white/30 px-3 py-2 font-medium transition flex-shrink-0'>
                   <div className='flex items-center gap-2 md:gap-4'>
                     {i === 0 && <Cake className='text-rose-400 size-3 md:size-5' />}
                     {i === 1 && <Candy className='text-pink-400 size-3 md:size-5' />}
@@ -142,7 +142,7 @@ function App() {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className='flex-1 flex justify-center'
+            className='flex-1 flex justify-center order-2'
           >
 
             <div className='w-full max-w-sm rounded-3xl overflow-hidden shadow-lg bg-white'>
