@@ -56,37 +56,47 @@ function App() {
         </div>
 
         {open && (
-          <div className='md:hidden'>
+          <div className='md:hidden fixed inset-0 z-50'>
             <div className='fixed left-0 top-0 h-full w-[calc(100%-320px)] bg-black/60'
-              onClick={() => setOpen(false)}>
-              <div className='fixed right-0 top-0 h-full w-80 bg-rose-100 border-1 border-white/10 p-6'>
-                <div className='flex items-center justify-between mb-2'>
-                  <div className='flex items-center gap-2'>
-                    <a href="#">
-                      <span className='font-semibold'>
-                        Pot Cakes
-                      </span>
-                    </a>
-                  </div>
-                  <button className='p-2 rounded-lg' onClick={() => setOpen(false)}>
-                    <X className='size-5' />
-                  </button>
-                </div>
-                <div className='flex flex-col gap-4 bg-rose-100 p-4 w-90'>
-                  {navLinks.map((l) => (
-                    <a key={l.href} href={l.href} className='text-[#523a00]'>
-                      {l.label}
-                    </a>
-                  ))}
-                </div>
+              onClick={() => setOpen(false)}
+            />
+            <div className='fixed right-0 top-0 h-full w-80 bg-rose-100 border-1 border-rose-200 p-6 shadow-xl'>
+              <div className='flex items-center justify-between mb-6'>
+                <a href="#" onClick={() => setOpen(false)}>
+                  <span className='font-semibold text-[#b8860b]'>
+                    Pot Cakes
+                  </span>
+                </a>
+                <button className='p-2 rounded-lg' onClick={() => setOpen(false)}>
+                  <X className='size-5' />
+                </button>
+              </div>
+
+              <div className='flex flex-col gap-6 items-center'>
+                {navLinks.map((l) => (
+                  <a
+                    key={l.href}
+                    href={l.href}
+                    className='relative text-[#523a00] hover:text-[#b8860b] text-xl transition-colors duration-300 group w-fit'
+                    onClick={() => setOpen(false)}
+                  >
+                    {l.label}
+                    <span className='absolute -bottom-1 left-0 w-0 h-0.5 bg-[#b8860b] transition-all duration-300 group-hover:w-full rounded-full' />
+                  </a>
+                ))}
+
+                <a className='mt-2 inline-flex items-center justify-center rounded-2xl text-white bg-rose-400 px-6 py-3 font-medium hover:bg-rose-500 transition-all duration-300 cursor-pointer'>
+                  Fazer pedido
+                </a>
               </div>
             </div>
           </div>
-        )}
+        )
+        }
       </header>
 
       {/* Heroo */}
-      <section className='relative overflow-hidden'>
+      <section className='relative overflow-hidden' >
         <div className='mx-auto max-w-6xl px-4 py-20 relative flex flex-col md:flex-row items-center gap-12'>
 
           <div className='flex-1 max-w-xl order-1'>
@@ -189,7 +199,7 @@ function App() {
 
 
       {/* Sobre */}
-      <section id='sobre' className='py-30 mt-15 bg-amber-50'>
+      <section id='sobre' className='py-30 mt-15 bg-amber-50' >
         <div className='mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center gap-12'>
           <motion.div
             initial={{ opacity: 0, x: -40 }}
