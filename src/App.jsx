@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import {
   Cake,
   Candy,
@@ -54,16 +54,32 @@ function App() {
             <Menu className='size-5' />
           </button>
         </div>
+      </header>
 
+      <AnimatePresence>
         {open && (
           <div className='md:hidden fixed inset-0 z-50'>
-            <div className='fixed left-0 top-0 h-full w-[calc(100%-320px)] bg-black/60'
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className='fixed left-0 top-0 h-full w-[calc(100%-320px)] bg-black/60'
               onClick={() => setOpen(false)}
             />
-            <div className='fixed right-0 top-0 h-full w-80 bg-rose-100 border-1 border-rose-200 p-6 shadow-xl'>
+
+            <motion.div
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ duration: 0.3, ease: 'easeOut' }}
+              className='fixed right-0 top-0 h-full w-80 bg-rose-50 border-l border-rose-200 p-6 shadow-xl'
+            >
+
               <div className='flex items-center justify-between mb-6'>
                 <a href="#" onClick={() => setOpen(false)}>
-                  <span className='font-semibold text-[#b8860b]'>
+                  <span className='font-semibold text-[#b8860b] text-xl'>
                     Pot Cakes
                   </span>
                 </a>
@@ -72,7 +88,7 @@ function App() {
                 </button>
               </div>
 
-              <div className='flex flex-col gap-6 items-center'>
+              <div className='flex flex-col gap-6 items-center mt-22'>
                 {navLinks.map((l) => (
                   <a
                     key={l.href}
@@ -89,11 +105,10 @@ function App() {
                   Fazer pedido
                 </a>
               </div>
-            </div>
+            </motion.div>
           </div>
-        )
-        }
-      </header>
+        )}
+      </AnimatePresence>
 
       {/* Heroo */}
       <section className='relative overflow-hidden' >
