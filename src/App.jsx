@@ -65,7 +65,7 @@ function App() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className='fixed left-0 top-0 h-full w-[calc(100%-320px)] bg-black/60'
+              className='absolute inset-0 bg-black/60'
               onClick={() => setOpen(false)}
             />
 
@@ -74,7 +74,7 @@ function App() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ duration: 0.3, ease: 'easeOut' }}
-              className='fixed right-0 top-0 h-full w-80 bg-rose-50 border-l border-rose-200 p-6 shadow-xl'
+              className='fixed right-0 top-0 h-full w-80 bg-rose-100 border-l border-rose-200 p-6 shadow-xl'
             >
 
               <div className='flex items-center justify-between mb-6'>
