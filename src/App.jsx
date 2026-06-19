@@ -11,6 +11,10 @@ import {
 
 import mine from './assets/Mine.jpeg';
 import ovoKinder from './assets/ovoKinder.jpeg';
+import bolochan from './assets/bolochan.jpeg';
+import cookie from './assets/cookie.jpeg';
+import uva from './assets/uva.jpeg';
+import sobremesa from './assets/sobremesa.jpeg';
 
 
 const navLinks = [
@@ -276,6 +280,97 @@ function App() {
           </motion.div>
         </div>
 
+      </section>
+
+
+
+      {/*Produtos */}
+      <section id='produtos' className='py-20 bg-rose-100'>
+        <div className='mx-auto max-w-6xl px-4'>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className='text-center mb-12'
+          >
+            <span className='text-rose-400 font-medium text-sm uppercase tracking-widest'>
+              Cardápio
+            </span>
+            <h2 className='mt-2 text-3xl md:text-4xl font-extrabold text-[#b8860b]'>
+              Nossos <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#8b6914] to-[#fcc53a]'>Produtos</span>
+            </h2>
+            <p className='mt-3 text-[#523a00] font-serif'>
+              Tudo feito sob encomenda com ingredientes selecionados
+            </p>
+          </motion.div>
+
+          {/*Grid de produtos */}
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {[
+              {
+                img: bolochan,
+                badge: 'Mais Pedido',
+                title: 'Bolos & Tortas',
+                desc: 'Bolos artesanais personalizados para todas as ocasiões. Sabores únicos com acabamento impecável.',
+              },
+              {
+                img: sobremesa,
+                badge: 'Especial',
+                title: 'Doces Finos',
+                desc: 'Uma seleção refinada de doces artesanais perfeitos para presentear ou para eventos especiais.',
+              },
+              {
+                img: cookie,
+                badge: 'Novidade',
+                title: 'Cookies Artesanais',
+                desc: 'Cookies crocantes por fora e macios por dentro, com recheios generosos de chocolate, nuts e ingredientes selecionados.',
+              },
+              {
+                img: uva,
+                badge: 'Sofisticados',
+                title: 'Sobremesas',
+                desc: 'Sobremesas sofisticadas para fechar qualquer ocasião com chave de ouro, combinando texturas, sabores e apresentação impecável.',
+              }
+            ].map((produto, i) => (
+              <motion.div
+                key={produto.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className='group rounded-3xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-all duration-300'
+              >
+                {/* Imagem com overlay no hover */}
+                <div className='relative overflow-hidden aspect-[4/3]'>
+                  <img
+                    src={produto.img}
+                    alt={produto.title}
+                    className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500'
+                  />
+                  <div className='absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center'>
+                    <button className='opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 bg-rose-400 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-rose-500 cursor-pointer'>
+                      Encomendar
+                    </button>
+                  </div>
+                </div>
+
+                {/* Conteúdo */}
+                <div className='p-5'>
+                  <span className='inline-block text-[10px] uppercase tracking-wider font-semibold text-rose-400 bg-rose-50 px-2 py-1 rounded-full'>
+                    {produto.badge}
+                  </span>
+                  <h3 className='mt-3 text-lg font-bold text-[#523a00]'>
+                    {produto.title}
+                  </h3>
+                  <p className='mt-2 text-sm text-[#523a00]/80 font-serif leading-relaxed'>
+                    {produto.desc}
+                  </p>
+                </div>
+              </motion.div>
+            ))},
+          </div>
+        </div>
       </section>
     </div>
   )
