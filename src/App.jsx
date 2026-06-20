@@ -475,6 +475,97 @@ function App() {
             >
               <img src={sobremesa} alt="Trufa gourmet" className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 aspect-square' />
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Avaliações */}
+      <section id='avaliacoes' className='py-20 bg-rose-50'>
+        <div className='mx-auto max-w-6xl px-4'>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className='text-center mb-12'
+          >
+            <span className='text-rose-400 font-medium text-sm uppercase tracking-widest'>
+              Clientes
+            </span>
+            <h2 className='mt-2 text-3xl md:text-4xl font-extrabold text-[#b8860b]'>
+              O que dizem sobre <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#8b6914] to-[#fcc53a]'>nós</span>
+            </h2>
+          </motion.div>
+
+          {/* Grid com as avaliações */}
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+            {[
+              {
+                texto: 'Os brigadeiros da Pot Cakes são simplesmente divinos! Pedi para o aniversário da minha filha e todos amaram. Com certeza vou encomendar mais vezes!',
+                nome: 'Lais',
+                tipo: 'Cliente fiel',
+                destaque: false,
+              },
+              {
+                texto: 'Qualidade impecável! O bolo que encomendei para meu casamento ficou lindo e delicioso. Talento incrível e muita dedicação no que faz.',
+                nome: 'Juliana',
+                tipo: 'Noiva feliz',
+                destaque: true,
+              },
+              {
+                texto: 'Melhor confeitaria da região! Os gelinhos são uma delícia e a apresentação é lindíssima. Super recomendo para quem quer qualidade e sabor.',
+                nome: 'Fernanda',
+                tipo: 'Cliente nova',
+                destaque: false,
+              }
+            ].map((d, i) => (
+              <motion.div
+                key={d.nome}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className={`rounded-3xl p-6 shadow-md transition-all duration-300 
+                  ${d.destaque ? 'bg-rose-400 text-white scale-105'
+                    : 'bg-white text-[#523a00]'
+                  }`}
+              >
+                {/* Estrelas */}
+                <div className='flex gap-1 mb-4'>
+                  {[...Array(5)].map((_, idx) => (
+                    <span key={idx} className={d.destaque ? 'text-white' : 'text-[#b8860b]'}>
+                      ★
+                    </span>
+                  ))}
+                </div>
+
+                {/* Texto */}
+                <p className={`italic font-serif leading-relaxed mb-6 
+                  ${d.destaque ? 'text-white/90' : 'text-[#523a00]/80'
+                  }`}
+                >
+                  "{d.texto}"
+                </p>
+
+                {/* Avatar + nome */}
+                <div className='flex items-center gap-3'>
+                  <div className={`size-10 rounded-full flex items-center justify-center font-bold 
+                      ${d.destaque
+                      ? 'bg-white/20 text-white'
+                      : 'bg-rose-100 text-rose-400'
+                    }`}
+                  >
+                    {d.nome.charAt(0)}
+                  </div>
+                  <div>
+                    <p className='font-semibold text-sm'>{d.nome}</p>
+                    <p className={`text-xs ${d.destaque ? 'text-white/70' : 'text-[#523a00]/60'}`}>
+                      {d.tipo}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
 
           </div>
         </div>
