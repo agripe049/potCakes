@@ -33,11 +33,12 @@ function App() {
 
 
   return (
-    <div className='bg-rose-100 text-[#b8860b]'>
+    <div className='bg-rose-50 text-[#b8860b]'>
       <header className='sticky top-0 z-40 border-b border-rose-200 bg-white/80'>
         <div className='mx-auto max-w-6xl px-4 py-4 flex items-center justify-between'>
-          <a href="#" className='flex items-center gap-2'>
-            <span className='text-lg font-bold tracking-tight'>Pot Cakes Confeitaria</span>
+          <a href="#" className='flex flex-col items-start gap-0'>
+            <span className='text-lg font-bold tracking-tight leading-none'>Pot Cakes</span>
+            <span className='text-xs font-medium uppercase tracking-wide text-[#523a00]/70 leading-none mt-1'>Confeitaria</span>
           </a>
 
           <nav className='hidden md:flex items-center gap-6 text-sm'>
@@ -126,7 +127,7 @@ function App() {
             <motion.h1 initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
-              className='text-4xl md:text-5xl font-extrabold text-[#b8860b] max-w-lg'
+              className='font-serif text-4xl md:text-5xl font-extrabold text-[#b8860b] max-w-lg leading-tight'
             >
               Doces que contam {""} <br />
               <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#8b6914] to-[#fcc53a]'>
@@ -137,7 +138,7 @@ function App() {
             <motion.p initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1 }}
-              className='mt-4 text-[#523a00] font-serif'
+              className='mt-5 text-[#523a00] font-serif leading-relaxed'
             >
               Bolos, doces, cookies, empadinhas, mini vulcão natural, caseiros,
               tortas doces e salgadas e sobremesas sofisticadas.
@@ -146,12 +147,12 @@ function App() {
             <motion.div initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1 }}
-              className='mt-8 flex flex-row md:flex-row gap-3'
+              className='mt-10 flex flex-row gap-3'
             >
-              <a href="#" className='inline-flex items-center justify-center gap-2 rounded-2xl text-white bg-rose-400 px-6 py-3 font-medium hover:bg-rose-500 transition cursor-pointer'>
+              <a href="#" className='inline-flex items-center justify-center gap-2 rounded-full text-white bg-rose-400 px-6 py-3 font-medium hover:bg-rose-500 transition cursor-pointer'>
                 Ver Menu
               </a>
-              <a href="#" className='inline-flex items-center justify-center gap-2 rounded-2xl text-[#523a00] px-6 py-3 font-medium border-2 border-[#b8870b7c] hover:bg-white/30 transition-all duration-300 cursor-pointer'>
+              <a href="#" className='inline-flex items-center justify-center gap-2 rounded-full text-[#523a00] px-6 py-3 font-medium border-2 border-[#b8870b7c] hover:bg-white/30 transition-all duration-300 cursor-pointer'>
                 Fazer pedido
               </a>
             </motion.div>
@@ -159,7 +160,7 @@ function App() {
             <motion.div initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1 }}
-              className='mt-14 flex flex-row flex-wrap md:flex-row gap-2'
+              className='mt-16 flex flex-row flex-wrap gap-2'
             >
               {["Bolos & Tortas", "Doces", "Cookies", "Sobremesas"].map((label, i) => (
                 <div key={label} className='rounded-2xl border border-[#b8870b7c] bg-white/30 px-3 py-2 font-medium transition flex-shrink-0'>
@@ -289,7 +290,7 @@ function App() {
 
 
       {/*Produtos */}
-      <section id='produtos' className='py-20 bg-rose-100'>
+      <section id='produtos' className='py-20 bg-rose-50'>
         <div className='mx-auto max-w-6xl px-4'>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
