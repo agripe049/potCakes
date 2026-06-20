@@ -15,13 +15,17 @@ import bolochan from './assets/bolochan.jpeg';
 import cookie from './assets/cookie.jpeg';
 import uva from './assets/uva.jpeg';
 import sobremesa from './assets/sobremesa.jpeg';
+import boloPudim from './assets/boloPudim.jpeg';
+import ovoUva from './assets/ovoUva.jpeg';
+import caixa from './assets/caixa.jpeg';
 
 
 const navLinks = [
   { href: '#sobre', label: 'Sobre' },
   { href: '#produtos', label: 'Produtos' },
-  { href: '#avaliacoes', label: 'Avaliações' },
-  { href: '#contatos', label: 'Contatos' }
+  { href: '#galeria', label: 'Galeria' },
+  { href: '#avaliacoes', label: 'Avaliações' }
+
 ];
 
 function App() {
@@ -368,7 +372,110 @@ function App() {
                   </p>
                 </div>
               </motion.div>
-            ))},
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+      {/*Galeria */}
+      <section id='galeria' className='py-20 bg-white'>
+        <div className="mx-auto max-w-6xl px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className='text-center mb-12'
+          >
+            <span className='text-rose-400 font-medium text-sm uppercase tracking-widest'>
+              Galeria
+            </span>
+            <h2 className='mt-2 text-3xl md:text-4xl font-extrabold text-[#b8860b]'>
+              Feitos com <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#8b6914] to-[#fcc53a]'>muito amor</span>
+            </h2>
+          </motion.div>
+
+          {/*Grid mansonry */}
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+
+            {/* 1º imagem */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className='md:row-span-2 rounded-3xl overflow-hidden shadow-md group'
+            >
+              <img src={caixa} alt="Caixa de presente" className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 aspect-square md:aspect-auto' />
+            </motion.div>
+
+            {/* 2º imagem */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className='rounded-3xl overflow-hidden shadow-md group'
+            >
+              <img src={boloPudim} alt="Bolo de pudim" className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 aspect-square' />
+            </motion.div>
+
+            {/* 3º imagem */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className='rounded-3xl overflow-hidden shadow-md group'
+            >
+              <img src={ovoUva} alt="Ovo de colher de uva" className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 aspect-square' />
+            </motion.div>
+
+            {/* 4º imagem */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+              className='md:col-span-2 rounded-3xl overflow-hidden shadow-md group'
+            >
+              <img src={bolochan} alt="Bolo Chantilly" className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 aspect-[2/1]' />
+            </motion.div>
+
+            {/* 5º imagem */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              viewport={{ once: true }}
+              className='rounded-3xl overflow-hidden shadow-md group'
+            >
+              <img src={uva} alt="Picolé gourmet" className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 aspect-square' />
+            </motion.div>
+
+            {/* Imagem 6 */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              viewport={{ once: true }}
+              className='rounded-3xl overflow-hidden shadow-md group'
+            >
+              <img src={cookie} alt="Bolo com frutas" className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 aspect-square' />
+            </motion.div>
+
+            {/* Imagem 7 */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              viewport={{ once: true }}
+              className='rounded-3xl overflow-hidden shadow-md group'
+            >
+              <img src={sobremesa} alt="Trufa gourmet" className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 aspect-square' />
+            </motion.div>
+
           </div>
         </div>
       </section>
