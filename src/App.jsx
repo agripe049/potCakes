@@ -5,6 +5,7 @@ import {
   Candy,
   Cookie,
   IceCreamBowl,
+  MapPin,
   Menu,
   X
 } from 'lucide-react';
@@ -18,6 +19,7 @@ import sobremesa from './assets/sobremesa.jpeg';
 import boloPudim from './assets/boloPudim.jpeg';
 import ovoUva from './assets/ovoUva.jpeg';
 import caixa from './assets/caixa.jpeg';
+import { LuInstagram } from 'react-icons/lu';
 
 
 const navLinks = [
@@ -52,7 +54,11 @@ function App() {
                 <span className='absolute -bottom-1 left-0 w-0 h-0.5 bg-[#fcc53a] transition-all duration-300 group-hover:w-full rounded-full' />
               </a>
             ))}
-            <a className='inline-flex items-center justify-center gap-2 rounded-2xl text-white bg-rose-400 px-6 py-3 font-medium hover:bg-rose-500 transition cursor-pointer'>
+            <a
+              href="https://wa.me/5544984645033"
+              target="_blank"
+              rel="noopener noreferrer"
+              className='inline-flex items-center justify-center gap-2 rounded-full text-white bg-rose-400 px-6 py-3 font-medium hover:bg-rose-500 transition cursor-pointer'>
               Fazer pedido
             </a>
           </nav>
@@ -110,7 +116,11 @@ function App() {
                   </a>
                 ))}
 
-                <a className='mt-2 inline-flex items-center justify-center rounded-2xl text-white bg-rose-400 px-6 py-3 font-medium hover:bg-rose-500 transition-all duration-300 cursor-pointer'>
+                <a
+                  href="https://wa.me/5544984645033"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className='mt-2 inline-flex items-center justify-center rounded-2xl text-white bg-rose-400 px-6 py-3 font-medium hover:bg-rose-500 transition-all duration-300 cursor-pointer'>
                   Fazer pedido
                 </a>
               </div>
@@ -354,9 +364,11 @@ function App() {
                     className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500'
                   />
                   <div className='absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center'>
-                    <button className='opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 bg-rose-400 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-rose-500 cursor-pointer'>
+                    <a href="https://wa.me/5544984645033"
+                      target="_blank"
+                      rel="noopener noreferrer" className='opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 bg-rose-400 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-rose-500 cursor-pointer'>
                       Encomendar
-                    </button>
+                    </a>
                   </div>
                 </div>
 
@@ -526,7 +538,7 @@ function App() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className={`rounded-3xl p-6 shadow-md transition-all duration-300 
+                className={`rounded-3xl p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 
                   ${d.destaque ? 'bg-rose-400 text-white scale-105'
                     : 'bg-white text-[#523a00]'
                   }`}
@@ -571,6 +583,116 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/* CTA Whats */}
+      <section className='py-20 bg-gradient-to-br from-[#8b6914] to-[#523a00] text-center'>
+        <div className='mx-auto max-w-2xl px-4'>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <span className='text-[#fcc53a] font-medium text-sm uppercase tracking-widest'>
+              Vamos conversar?
+            </span>
+            <h2 className='mt-3 text-3xl md:text-4xl font-serif font-bold text-white leading-tight'>
+              Faça sua encomenda <br />
+              <span className='italic text-[#fcc53a]'>hoje mesmo</span>
+            </h2>
+            <p className='mt-4 text-white/80 font-serif'>
+              Entre em contato pelo WhatsApp e vamos criar algo especial juntos.
+            </p>
+
+
+            <a
+              href="https://wa.me/5544984645033"
+              target='_blank'
+              rel="noopener noreferrer"
+              className='mt-8 inline-flex items-center gap-2 bg-[#fcc53a] text-[#523a00] px-8 py-4 rounded-full font-semibold hover:bg-[#ffd966] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300'
+            >
+              <svg className='size-5' viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-1.746-.872-2.886-1.557-4.034-3.53-.305-.524.305-.486.875-1.62.099-.197.05-.371-.05-.52-.099-.15-.673-1.62-.922-2.19-.247-.57-.498-.494-.673-.494-.169 0-.4-.025-.6-.025-.198 0-.523.075-.797.371-.273.296-1.043 1.02-1.043 2.49 0 1.471 1.07 2.89 1.219 3.085.149.198 2.066 3.16 5.018 4.301 2.95 1.143 2.95.762 3.479.715.526-.05 1.694-.694 1.92-1.36.227-.665.227-1.235.149-1.359-.075-.135-.273-.21-.574-.36" />
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.851 5.058 2.291 7.034L1.5 22.5l3.61-1.197A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.991 0-3.873-.526-5.518-1.518l-.394-.236-3.07.99.998-2.99-.255-.402A9.738 9.738 0 0 1 2.182 12C2.182 6.582 6.582 2.182 12 2.182S21.818 6.582 21.818 12 17.418 21.818 12 21.818z" />
+              </svg>
+              Chamar no WhatsApp
+            </a>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className='bg-[#523a00] text-white/80 pt-16 pb-8'>
+        <div className='mx-auto max-w-6xl px-4'>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
+
+            {/* coluna sobre */}
+            <div>
+              <h3 className='text-lg font-serif font-bold text-white'>Pot Cakes</h3>
+              <p className='text-xs uppercase tracking-wide text-[#fcc53a]'>Confeitaria</p>
+              <p className='mt-4 text-sm leading-relaxed'>
+                Doces artesanais feitos com amor e ingredientes selecionados.
+                Pedidos sob encomenda.
+              </p>
+            </div>
+
+            {/* coluna Produtos */}
+            <div>
+              <h4 className='text-sm font-semibold uppercase tracking-wide text-[#fcc53a]'>
+                Produtos
+              </h4>
+              <ul className='mt-4 space-y-2 text-sm'>
+                <li><a href="#produtos" className='hover:text-[#fcc53a] transition-colors duration-300'>Bolos & Tortas</a></li>
+                <li><a href="#produtos" className='hover:text-[#fcc53a] transition-colors duration-300'>Doces Finos</a></li>
+                <li><a href="#produtos" className='hover:text-[#fcc53a] transition-colors duration-300'>Cookies Artesanais</a></li>
+                <li><a href="#produtos" className='hover:text-[#fcc53a] transition-colors duration-300'>Sobremesas</a></li>
+              </ul>
+            </div>
+
+            {/* coluna Contato */}
+            <div>
+              <h4 className='text-sm font-semibold uppercase tracking-wide text-[#fcc53a]'>Contato</h4>
+              <ul className='mt-4 space-y-3 text-sm'>
+                <li>
+                  <a
+                    href="https://wa.me/5544984645033"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className='flex items-center gap-2 hover:text-[#fcc53a] transition-colors duration-300'
+                  >
+                    <svg className='size-4' viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-1.746-.872-2.886-1.557-4.034-3.53-.305-.524.305-.486.875-1.62.099-.197.05-.371-.05-.52-.099-.15-.673-1.62-.922-2.19-.247-.57-.498-.494-.673-.494-.169 0-.4-.025-.6-.025-.198 0-.523.075-.797.371-.273.296-1.043 1.02-1.043 2.49 0 1.471 1.07 2.89 1.219 3.085.149.198 2.066 3.16 5.018 4.301 2.95 1.143 2.95.762 3.479.715.526-.05 1.694-.694 1.92-1.36.227-.665.227-1.235.149-1.359-.075-.135-.273-.21-.574-.36" />
+                      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.851 5.058 2.291 7.034L1.5 22.5l3.61-1.197A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.991 0-3.873-.526-5.518-1.518l-.394-.236-3.07.99.998-2.99-.255-.402A9.738 9.738 0 0 1 2.182 12C2.182 6.582 6.582 2.182 12 2.182S21.818 6.582 21.818 12 17.418 21.818 12 21.818z" />
+                    </svg>
+                    WhatsApp
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/pot_cakes.confeitaria?igsh=ZTZnZ256bGQwMXc2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className='flex items-center gap-2 hover:text-[#fcc53a] transition-colors duration-300'
+                  >
+                    <LuInstagram className='size-4' />
+                    @pot_cakes.confeitaria
+                  </a>
+                </li>
+                <li className='flex items-center gap-2 text-white/60'>
+                  <MapPin className='size-4' />
+                  Indianópolis, PR
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Final */}
+          <div className='mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-white/60'>
+            <p>&copy; {new Date().getFullYear()} Pot Cakes Confeitaria - Todos os direitos reservados</p>
+            <p>Feito com amor e muito carinho</p>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
