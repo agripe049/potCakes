@@ -159,11 +159,10 @@ function App() {
               transition={{ duration: 0.5, delay: 1 }}
               className='mt-10 flex flex-row gap-3'
             >
-              <a href="#" className='inline-flex items-center justify-center gap-2 rounded-full text-white bg-rose-400 px-6 py-3 font-medium hover:bg-rose-500 transition cursor-pointer'>
-                Ver Menu
-              </a>
-              <a href="#" className='inline-flex items-center justify-center gap-2 rounded-full text-[#523a00] px-6 py-3 font-medium border-2 border-[#b8870b7c] hover:bg-white/30 transition-all duration-300 cursor-pointer'>
-                Fazer pedido
+              <a href="https://wa.me/5544984645033"
+                target="_blank"
+                rel="noopener noreferrer" className='inline-flex items-center justify-center gap-2 rounded-full text-white bg-rose-400 px-6 py-3 font-medium hover:bg-rose-500 transition cursor-pointer'>
+                Fazer Pedido
               </a>
             </motion.div>
 
@@ -220,9 +219,13 @@ function App() {
               {/* Area branca embaixo da imagem */}
               <div className='px-5 py-4 flex items-center justify-between'>
                 <p className='text-[#523a00] font-semibold text-sm'>Bolos personalizados</p>
-                <span className='text-rose-400 border border-rose-300 rounded-full px-3 py-1 text-xs cursor-pointer hover:bg-rose-50 transition'>
+                <a
+                  href="https://wa.me/5544984645033"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className='text-rose-400 border border-rose-300 rounded-full px-3 py-1 text-xs cursor-pointer hover:bg-rose-50 transition'>
                   + Fazer Pedido
-                </span>
+                </a>
               </div>
             </div>
           </motion.div>
@@ -678,7 +681,7 @@ function App() {
                     @pot_cakes.confeitaria
                   </a>
                 </li>
-                <li className='flex items-center gap-2 text-white/60'>
+                <li className='flex items-center gap-2 hover:text-[#fcc53a] transition-colors duration-300 cursor-pointer'>
                   <MapPin className='size-4' />
                   Indianópolis, PR
                 </li>
@@ -689,7 +692,6 @@ function App() {
           {/* Final */}
           <div className='mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-white/60'>
             <p>&copy; {new Date().getFullYear()} Pot Cakes Confeitaria - Todos os direitos reservados</p>
-            <p>Feito com amor e muito carinho</p>
           </div>
         </div>
       </footer>
