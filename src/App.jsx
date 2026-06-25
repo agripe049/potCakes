@@ -7,7 +7,8 @@ import {
   IceCreamBowl,
   MapPin,
   Menu,
-  X
+  X,
+  ArrowUp
 } from 'lucide-react';
 
 import mine from './assets/Mine.jpeg';
@@ -89,16 +90,19 @@ function App() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ duration: 0.3, ease: 'easeOut' }}
-              className='fixed right-0 top-0 h-full w-80 bg-rose-100 border-l border-rose-200 p-6 shadow-xl'
+              className='fixed right-0 top-0 h-full w-80 bg-rose-50 border-l border-rose-200 p-6 shadow-xl flex flex-col'
             >
 
               <div className='flex items-center justify-between mb-6'>
-                <a href="#" onClick={() => setOpen(false)}>
+                <a href="#" onClick={() => setOpen(false)} className='flex flex-col items-start gap-0'>
                   <span className='font-semibold text-[#b8860b] text-xl'>
                     Pot Cakes
                   </span>
+                  <span className='text-xs font-medium uppercase tracking-wide text-[#523a00]/70 leading-none mt-1'>
+                    Confeitaria
+                  </span>
                 </a>
-                <button className='p-2 rounded-lg' onClick={() => setOpen(false)}>
+                <button className='p-2 rounded-lg transition-colors duration-300' onClick={() => setOpen(false)}>
                   <X className='size-5' />
                 </button>
               </div>
@@ -695,7 +699,18 @@ function App() {
           </div>
         </div>
       </footer>
-    </div>
+      <a
+        href="https://wa.me/5544984645033"
+        target="_blank"
+        rel="noopener noreferrer"
+        className='fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300'
+      >
+        <svg className='size-6' viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-1.746-.872-2.886-1.557-4.034-3.53-.305-.524.305-.486.875-1.62.099-.197.05-.371-.05-.52-.099-.15-.673-1.62-.922-2.19-.247-.57-.498-.494-.673-.494-.169 0-.4-.025-.6-.025-.198 0-.523.075-.797.371-.273.296-1.043 1.02-1.043 2.49 0 1.471 1.07 2.89 1.219 3.085.149.198 2.066 3.16 5.018 4.301 2.95 1.143 2.95.762 3.479.715.526-.05 1.694-.694 1.92-1.36.227-.665.227-1.235.149-1.359-.075-.135-.273-.21-.574-.36" />
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.851 5.058 2.291 7.034L1.5 22.5l3.61-1.197A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.991 0-3.873-.526-5.518-1.518l-.394-.236-3.07.99.998-2.99-.255-.402A9.738 9.738 0 0 1 2.182 12C2.182 6.582 6.582 2.182 12 2.182S21.818 6.582 21.818 12 17.418 21.818 12 21.818z" />
+        </svg>
+      </a>
+    </div >
   )
 }
 
