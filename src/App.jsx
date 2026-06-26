@@ -28,8 +28,19 @@ const navLinks = [
   { href: '#produtos', label: 'Produtos' },
   { href: '#galeria', label: 'Galeria' },
   { href: '#avaliacoes', label: 'Avaliações' }
-
 ];
+
+const listVariants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.08, delayChildren: 0.2 },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, x: 24 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.35, ease: 'easeOut' } },
+}
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -72,6 +83,8 @@ function App() {
         </div>
       </header>
 
+
+
       <AnimatePresence>
         {open && (
           <div className='md:hidden fixed inset-0 z-50'>
@@ -89,11 +102,13 @@ function App() {
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
-              transition={{ duration: 0.3, ease: 'easeOut' }}
-              className='fixed right-0 top-0 h-full w-80 bg-rose-50 border-l border-rose-200 p-6 shadow-xl flex flex-col'
+              transition={{ duration: 0.35, ease: 'easeOut' }}
+              className='fixed right-0 top-0 h-full w-80 bg-rose-50 border-l border-rose-200 p-6 shadow-xl flex flex-col overflow-hidden'
             >
 
-              <div className='flex items-center justify-between mb-6'>
+              <div className='absolute -top-10 -right-16 size-56 rounded-full bg-gradient-to-br from-[#fcc53a]/30 to-rose-300/30 blur-3xl pointer-events-none' />
+
+              <div className='relative p-6 flex items-center justify-between'>
                 <a href="#" onClick={() => setOpen(false)} className='flex flex-col items-start gap-0'>
                   <span className='font-semibold text-[#b8860b] text-xl'>
                     Pot Cakes
@@ -102,39 +117,63 @@ function App() {
                     Confeitaria
                   </span>
                 </a>
-                <button className='p-2 rounded-lg transition-colors duration-300' onClick={() => setOpen(false)}>
+                <motion.button
+                  whileTap={{ scale: 0.85, rotate: 90 }}
+                  className='p-2 rounded-lg transition-colors duration-300'
+                  onClick={() => setOpen(false)}
+                >
                   <X className='size-5' />
-                </button>
+                </motion.button>
               </div>
 
-              <div className='flex flex-col gap-6 items-center mt-22'>
+
+              <motion.div
+                variants={listVariants}
+                initial='hidden'
+                animate='visible'
+                className='relative flex-1 flex flex-col gap-2 px-6 mt-6 items-center'
+              >
                 {navLinks.map((l) => (
-                  <a
+                  <motion.a
                     key={l.href}
                     href={l.href}
-                    className='relative text-[#523a00] hover:text-[#b8860b] text-xl transition-colors duration-300 group w-fit'
+                    variants={itemVariants}
+                    className='flex items-center rounded-2xl px-3 py-3 text-[#523a00] text-lg font-medium active:bg-white/60 transition-colors'
                     onClick={() => setOpen(false)}
                   >
                     {l.label}
-                    <span className='absolute -bottom-1 left-0 w-0 h-0.5 bg-[#b8860b] transition-all duration-300 group-hover:w-full rounded-full' />
-                  </a>
+                  </motion.a>
                 ))}
+              </motion.div>
+
+              <div className='relative px-6 pb-8 pt-4 border-t border-rose-200 flex flex-col gap-3'>
 
                 <a
                   href="https://wa.me/5544984645033"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className='mt-2 inline-flex items-center justify-center rounded-2xl text-white bg-rose-400 px-6 py-3 font-medium hover:bg-rose-500 transition-all duration-300 cursor-pointer'>
+                  className='inline-flex items-center justify-center gap-2 rounded-2xl text-white bg-rose-400 px-6 py-3 font-medium hover:bg-rose-500 active:scale-95 transition-all'>
                   Fazer pedido
+                </a>
+                <a
+                  href="https://www.instagram.com/pot_cakes.confeitaria?igsh=ZTZnZ256bGQwMXc2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className='inline-flex items-center justify-center gap-2 text-sm text-[#523a00]/70'
+                >
+                  <LuInstagram className='size-4' />
+                  @pot_cakes.confeitaria
                 </a>
               </div>
             </motion.div>
           </div>
         )}
-      </AnimatePresence>
+      </AnimatePresence >
+
+
 
       {/* Heroo */}
-      <section className='relative overflow-hidden' >
+      < section className='relative overflow-hidden' >
         <div className='mx-auto max-w-6xl px-4 py-20 relative flex flex-col md:flex-row items-center gap-12'>
 
           <div className='flex-1 max-w-xl order-1'>
@@ -235,12 +274,12 @@ function App() {
           </motion.div>
 
         </div>
-      </section>
+      </section >
 
 
 
       {/* Sobre */}
-      <section id='sobre' className='py-30 mt-15 bg-amber-50' >
+      < section id='sobre' className='py-30 mt-15 bg-amber-50' >
         <div className='mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center gap-12'>
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -302,12 +341,12 @@ function App() {
           </motion.div>
         </div>
 
-      </section>
+      </section >
 
 
 
       {/*Produtos */}
-      <section id='produtos' className='py-20 bg-rose-50'>
+      < section id='produtos' className='py-20 bg-rose-50' >
         <div className='mx-auto max-w-6xl px-4'>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -395,11 +434,11 @@ function App() {
             ))}
           </div>
         </div>
-      </section>
+      </section >
 
 
       {/*Galeria */}
-      <section id='galeria' className='py-20 bg-white'>
+      < section id='galeria' className='py-20 bg-white' >
         <div className="mx-auto max-w-6xl px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -497,10 +536,10 @@ function App() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Avaliações */}
-      <section id='avaliacoes' className='py-20 bg-rose-50'>
+      < section id='avaliacoes' className='py-20 bg-rose-50' >
         <div className='mx-auto max-w-6xl px-4'>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -589,10 +628,10 @@ function App() {
 
           </div>
         </div>
-      </section>
+      </section >
 
       {/* CTA Whats */}
-      <section className='py-20 bg-gradient-to-br from-[#8b6914] to-[#523a00] text-center'>
+      < section className='py-20 bg-gradient-to-br from-[#8b6914] to-[#523a00] text-center' >
         <div className='mx-auto max-w-2xl px-4'>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -626,10 +665,10 @@ function App() {
             </a>
           </motion.div>
         </div>
-      </section>
+      </section >
 
       {/* Footer */}
-      <footer className='bg-[#523a00] text-white/80 pt-16 pb-8'>
+      < footer className='bg-[#523a00] text-white/80 pt-16 pb-8' >
         <div className='mx-auto max-w-6xl px-4'>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
 
@@ -698,7 +737,7 @@ function App() {
             <p>&copy; {new Date().getFullYear()} Pot Cakes Confeitaria - Todos os direitos reservados</p>
           </div>
         </div>
-      </footer>
+      </footer >
       <a
         href="https://wa.me/5544984645033"
         target="_blank"
