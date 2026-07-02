@@ -27,16 +27,17 @@ https://pot-cakes.vercel.app/
 ---
 
 ### ✨ Funcionalidades
-Landing Page moderna
-Design totalmente responsivo
-Navbar fixa
-Menu Mobile
-Navegação suave entre as seções
-Animações utilizando Framer Motion
-Botão para contato via WhatsApp
-Interface intuitiva
-Layout otimizado para diferentes dispositivos
-Ícones utilizando Lucide React
+
+* Landing Page moderna
+* Design totalmente responsivo
+* Navbar fixa
+* Menu Mobile
+* Navegação suave entre as seções
+* Animações utilizando Framer Motion
+* Botão para contato via WhatsApp
+* Interface intuitiva
+* Layout otimizado para diferentes dispositivos
+* Ícones utilizando Lucide React
 
 
 
