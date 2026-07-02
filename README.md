@@ -5,3 +5,9 @@ O foco do projeto foi criar uma experiência agradável para o usuário, destaca
 
 ---
 **Status**: O desenvolvimento da estrutura da aplicação foi concluído. O projeto encontra-se em fase de validação com a cliente, podendo receber ajustes pontuais de conteúdo e identidade visual antes da publicação da versão oficial.
+
+
+🚀 Acesse o Projeto
+
+🌐 Site:
+[https://pot-cakes.vercel.app/]
