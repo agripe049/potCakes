@@ -94,7 +94,7 @@ function App() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className='absolute inset-0 bg-black/60'
+              className='absolute inset-0 bg-black/60 backdrop-blur-sm'
               onClick={() => setOpen(false)}
             />
 
@@ -103,7 +103,7 @@ function App() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ duration: 0.35, ease: 'easeOut' }}
-              className='fixed right-0 top-0 h-full w-80 bg-rose-50 border-l border-rose-200 p-6 shadow-xl flex flex-col overflow-hidden'
+              className='fixed right-0 top-0 h-full w-80 bg-rose-50 border-l border-rose-200 shadow-xl flex flex-col overflow-hidden'
             >
 
               <div className='absolute -top-10 -right-16 size-56 rounded-full bg-gradient-to-br from-[#fcc53a]/30 to-rose-300/30 blur-3xl pointer-events-none' />
@@ -182,9 +182,9 @@ function App() {
               transition={{ duration: 1 }}
               className='font-serif text-4xl md:text-5xl font-extrabold text-[#b8860b] max-w-lg leading-tight'
             >
-              Doces que contam {""} <br />
+              Sabor artesanal em {""} <br />
               <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#8b6914] to-[#fcc53a]'>
-                histórias de amor
+                cada detalhe
               </span>
             </motion.h1>
 
@@ -193,8 +193,8 @@ function App() {
               transition={{ duration: 0.5, delay: 1 }}
               className='mt-5 text-[#523a00] font-serif leading-relaxed'
             >
-              Bolos, doces, cookies, empadinhas, mini vulcão natural, caseiros,
-              tortas doces e salgadas e sobremesas sofisticadas.
+              Bolos personalizados, doces finos, cookies artesanais e sobremesas
+              sofisticadas. Tudo preparado com ingredientes selecionados e muito capricho.
             </motion.p>
 
             <motion.div initial={{ opacity: 0, y: 20 }}
@@ -253,7 +253,7 @@ function App() {
                   <Cake className='text-rose-400 size-4' />
                   <div>
                     <p className='text-[#523a00] font-semibold text-sm'>100% Artesanal</p>
-                    <p className='text-[#b8860b] text-xs'>Feito com amor</p>
+                    <p className='text-[#b8860b] text-xs'>Feito com capricho</p>
                   </div>
                 </div>
               </div>
@@ -267,7 +267,7 @@ function App() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className='text-rose-400 border border-rose-300 rounded-full px-3 py-1 text-xs cursor-pointer hover:bg-rose-50 transition'>
-                  + Fazer Pedido
+                  + Encomendar
                 </a>
               </div>
             </div>
@@ -304,20 +304,20 @@ function App() {
             className='flex-1 max-w-xl'
           >
             <span className='text-rose-400 font-medium text-sm uppercase tracking-widest'>
-              Nossa história
+              Quem somos
             </span>
 
             <h2 className='mt-2 text-3xl md:text-4xl font-extrabold text-[#b8860b]'>
-              Feito com amor, <br />
+              Receitas únicas, <br />
               <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#8b6914] to-[#fcc53a]'>
-                entregue com carinho
+                momentos inesquecíveis
               </span>
             </h2>
 
             <p className='mt-4 text-[#523a00] font-serif leading-relaxed'>
-              A Pot Cakes nasceu do sonho de transformar momentos simples em memórias
-              doces. Cada bolo, cada docinho e cada cookie é preparado artesanalmente,
-              com ingredientes selecionados e muito cuidado em cada detalhe.
+              A Pot Cakes é uma confeitaria artesanal que nasceu da paixão por criar
+              doces únicos. Cada encomenda é tratada com atenção especial, do planejamento
+              à entrega, garantindo qualidade e sabor em cada mordida.
             </p>
 
             <p className='mt-3 text-[#523a00] font-serif leading-relaxed'>
@@ -328,8 +328,8 @@ function App() {
             {/*Números e conquistas */}
             <div className='mt-8 grid grid-cols-3 gap-4'>
               {[
-                { numero: "5+", label: "Anos de experiência" },
-                { numero: "400+", label: "Clientes satisfeitos" },
+                { numero: "6+", label: "Anos de experiência" },
+                { numero: "700+", label: "Clientes satisfeitos" },
                 { numero: "100%", label: "Artesanal" },
               ].map((item) => (
                 <div key={item.label} className='rounded-2xl border border-[#b8870b7c] bg-white/30 p-2  text-center'>
@@ -362,7 +362,7 @@ function App() {
               Nossos <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#8b6914] to-[#fcc53a]'>Produtos</span>
             </h2>
             <p className='mt-3 text-[#523a00] font-serif'>
-              Tudo feito sob encomenda com ingredientes selecionados
+              Encomendas personalizadas feitas com ingredientes de qualidade
             </p>
           </motion.div>
 
@@ -373,25 +373,25 @@ function App() {
                 img: bolochan,
                 badge: 'Mais Pedido',
                 title: 'Bolos & Tortas',
-                desc: 'Bolos artesanais personalizados para todas as ocasiões. Sabores únicos com acabamento impecável.',
+                desc: 'Bolos artesanais personalizados para aniversários, casamentos e toda ocasião especial, com acabamento impecável.',
               },
               {
                 img: sobremesa,
                 badge: 'Especial',
                 title: 'Doces Finos',
-                desc: 'Uma seleção refinada de doces artesanais perfeitos para presentear ou para eventos especiais.',
+                desc: 'Brigadeiros gourmet, trufas e docinhos artesanais ideais para presentear ou encantar os convidados do seu evento.',
               },
               {
                 img: cookie,
                 badge: 'Novidade',
                 title: 'Cookies Artesanais',
-                desc: 'Cookies crocantes por fora e macios por dentro, com recheios generosos de chocolate, nuts e ingredientes selecionados.',
+                desc: 'Crocantes por fora, macios por dentro — nossos cookies são feitos com recheios generosos e ingredientes selecionados.',
               },
               {
                 img: uva,
                 badge: 'Sofisticados',
                 title: 'Sobremesas',
-                desc: 'Sobremesas sofisticadas para fechar qualquer ocasião com chave de ouro, combinando texturas, sabores e apresentação impecável.',
+                desc: 'Criações sofisticadas que combinam texturas e sabores para encerrar qualquer celebração com chave de ouro.',
               }
             ].map((produto, i) => (
               <motion.div
@@ -549,10 +549,10 @@ function App() {
             className='text-center mb-12'
           >
             <span className='text-rose-400 font-medium text-sm uppercase tracking-widest'>
-              Clientes
+              Depoimentos
             </span>
             <h2 className='mt-2 text-3xl md:text-4xl font-extrabold text-[#b8860b]'>
-              O que dizem sobre <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#8b6914] to-[#fcc53a]'>nós</span>
+              Quem prova, <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#8b6914] to-[#fcc53a]'>aprova</span>
             </h2>
           </motion.div>
 
@@ -560,20 +560,20 @@ function App() {
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
             {[
               {
-                texto: 'Os brigadeiros da Pot Cakes são simplesmente divinos! Pedi para o aniversário da minha filha e todos amaram. Com certeza vou encomendar mais vezes!',
-                nome: 'Lais',
+                texto: 'Encomendei um bolo personalizado e fiquei impressionada com o resultado! Lindo visualmente e ainda mais gostoso. Toda a família elogiou muito.',
+                nome: 'Amanda',
                 tipo: 'Cliente fiel',
                 destaque: false,
               },
               {
-                texto: 'Qualidade impecável! O bolo que encomendei para meu casamento ficou lindo e delicioso. Talento incrível e muita dedicação no que faz.',
-                nome: 'Juliana',
-                tipo: 'Noiva feliz',
+                texto: 'Os cookies da Pot Cakes são simplesmente incríveis. Pedi para um chá de bebê e foram um sucesso absoluto. Com certeza vou encomendar mais vezes!',
+                nome: 'Camila',
+                tipo: 'Cliente Satisfeita',
                 destaque: true,
               },
               {
-                texto: 'Melhor confeitaria da região! Os gelinhos são uma delícia e a apresentação é lindíssima. Super recomendo para quem quer qualidade e sabor.',
-                nome: 'Fernanda',
+                texto: 'Atendimento atencioso do início ao fim. Os doces finos para o meu evento ficaram perfeitos, apresentação elegante e sabor que todo mundo adorou.',
+                nome: 'Patricia',
                 tipo: 'Cliente nova',
                 destaque: false,
               }
@@ -640,14 +640,14 @@ function App() {
             viewport={{ once: true }}
           >
             <span className='text-[#fcc53a] font-medium text-sm uppercase tracking-widest'>
-              Vamos conversar?
+              Pronto para encomendar?
             </span>
             <h2 className='mt-3 text-3xl md:text-4xl font-serif font-bold text-white leading-tight'>
-              Faça sua encomenda <br />
-              <span className='italic text-[#fcc53a]'>hoje mesmo</span>
+              Seu doce especial <br />
+              <span className='italic text-[#fcc53a]'>começa aqui</span>
             </h2>
             <p className='mt-4 text-white/80 font-serif'>
-              Entre em contato pelo WhatsApp e vamos criar algo especial juntos.
+              Entre em contato pelo WhatsApp e conte como podemos tornar sua ocasião ainda mais doce.
             </p>
 
 
@@ -677,8 +677,8 @@ function App() {
               <h3 className='text-lg font-serif font-bold text-white'>Pot Cakes</h3>
               <p className='text-xs uppercase tracking-wide text-[#fcc53a]'>Confeitaria</p>
               <p className='mt-4 text-sm leading-relaxed'>
-                Doces artesanais feitos com amor e ingredientes selecionados.
-                Pedidos sob encomenda.
+                Confeitaria artesanal especializada em bolos, doces e sobremesas personalizadas.
+                Encomendas com carinho e qualidade.
               </p>
             </div>
 
