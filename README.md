@@ -39,6 +39,25 @@ https://pot-cakes.vercel.app/
 * Layout otimizado para diferentes dispositivos
 * Ícones utilizando Lucide React
 
+---
+
+### 🛠️ Tecnologias Utilizadas
+
+* React
+* JavaScript
+* Vite
+* Tailwind CSS
+* Framer Motion
+* Lucide React
+
+---
+
+### 🎯 Objetivo do Projeto
+
+O objetivo deste projeto foi desenvolver uma landing page profissional para divulgar os produtos da PotCakes, proporcionando uma experiência moderna, responsiva e agradável aos visitantes.
+Além disso, o projeto serviu para consolidar conhecimentos em desenvolvimento Front-end utilizando React e bibliotecas modernas.
+
+
 
 
 
