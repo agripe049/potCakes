@@ -10,4 +10,4 @@ O foco do projeto foi criar uma experiência agradável para o usuário, destaca
 🚀 Acesse o Projeto
 
 🌐 Site:
-[https://pot-cakes.vercel.app/]
+https://pot-cakes.vercel.app/
