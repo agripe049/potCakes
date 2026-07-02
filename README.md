@@ -20,5 +20,7 @@ https://pot-cakes.vercel.app/
 
 <img width="1920" height="922" alt="Hero" src="https://github.com/user-attachments/assets/6f9043ee-34fa-440d-985f-e6468bab8f8e" />
 
+**Mobile**
+
 
 
