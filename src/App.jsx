@@ -725,7 +725,7 @@ function App() {
                 </li>
                 <li className='flex items-center gap-2 hover:text-[#fcc53a] transition-colors duration-300 cursor-pointer'>
                   <MapPin className='size-4' />
-                  Indianópolis, PR
+                  Indianópolis - PR
                 </li>
               </ul>
             </div>
