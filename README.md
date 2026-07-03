@@ -60,31 +60,51 @@ Além disso, o projeto serviu para consolidar conhecimentos em desenvolvimento F
 ---
 
 
-# ⚙ Como Executar o Projeto
+## ⚙ Como Executar o Projeto
 
-Clone o repositório
+**Clone o repositório**
 
 ```bash
 git clone https://github.com/agripe049/potCakes.git
 ```
 
-Entre na pasta
+**Entre na pasta**
 
 ```bash
 cd potCakes
 ```
 
-Instale as dependências
+**Instale as dependências**
 
 ```bash
 npm install
 ```
 
-Execute o projeto
+**Execute o projeto**
 
 ```bash
 npm run dev
 ```
+
+---
+
+### 🚀 Melhorias Futuras
+
+- Atualização do conteúdo definitivo da cliente.
+- Ajustes finais na identidade visual.
+- Melhorias de SEO.
+- Otimização das imagens.
+- Melhorias de acessibilidade.
+- Componentização completa das seções.
+
+---
+
+### ⭐ Gostou do projeto?
+
+Se este projeto foi interessante para você, deixe uma ⭐ no repositório!
+
+Isso ajuda bastante e incentiva a criação de novos projetos.
+
 
 
 
