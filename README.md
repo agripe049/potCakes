@@ -57,6 +57,35 @@ https://pot-cakes.vercel.app/
 O objetivo deste projeto foi desenvolver uma landing page profissional para divulgar os produtos da PotCakes, proporcionando uma experiência moderna, responsiva e agradável aos visitantes.
 Além disso, o projeto serviu para consolidar conhecimentos em desenvolvimento Front-end utilizando React e bibliotecas modernas.
 
+---
+
+
+# ⚙ Como Executar o Projeto
+
+Clone o repositório
+
+```bash
+git clone https://github.com/agripe049/potCakes.git
+```
+
+Entre na pasta
+
+```bash
+cd potCakes
+```
+
+Instale as dependências
+
+```bash
+npm install
+```
+
+Execute o projeto
+
+```bash
+npm run dev
+```
+
 
 
 
