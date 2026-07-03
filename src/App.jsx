@@ -8,7 +8,6 @@ import {
   MapPin,
   Menu,
   X,
-  ArrowUp
 } from 'lucide-react';
 
 import mine from './assets/Mine.jpeg';
@@ -173,7 +172,7 @@ function App() {
 
 
       {/* Heroo */}
-      < section className='relative overflow-hidden' >
+      <section className='relative overflow-hidden' >
         <div className='mx-auto max-w-6xl px-4 py-20 relative flex flex-col md:flex-row items-center gap-12'>
 
           <div className='flex-1 max-w-xl order-1'>
@@ -182,7 +181,7 @@ function App() {
               transition={{ duration: 1 }}
               className='font-serif text-4xl md:text-5xl font-extrabold text-[#b8860b] max-w-lg leading-tight'
             >
-              Sabor artesanal em {""} <br />
+              Sabor artesanal em <br />
               <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#8b6914] to-[#fcc53a]'>
                 cada detalhe
               </span>
@@ -279,7 +278,7 @@ function App() {
 
 
       {/* Sobre */}
-      < section id='sobre' className='py-30 mt-15 bg-amber-50' >
+      <section id='sobre' className='py-30 mt-15 bg-amber-50' >
         <div className='mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center gap-12'>
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -346,7 +345,7 @@ function App() {
 
 
       {/*Produtos */}
-      < section id='produtos' className='py-20 bg-rose-50' >
+      <section id='produtos' className='py-20 bg-rose-50' >
         <div className='mx-auto max-w-6xl px-4'>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -438,7 +437,7 @@ function App() {
 
 
       {/*Galeria */}
-      < section id='galeria' className='py-20 bg-white' >
+      <section id='galeria' className='py-20 bg-white' >
         <div className="mx-auto max-w-6xl px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -539,7 +538,7 @@ function App() {
       </section >
 
       {/* Avaliações */}
-      < section id='avaliacoes' className='py-20 bg-rose-50' >
+      <section id='avaliacoes' className='py-20 bg-rose-50' >
         <div className='mx-auto max-w-6xl px-4'>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -631,7 +630,7 @@ function App() {
       </section >
 
       {/* CTA Whats */}
-      < section className='py-20 bg-gradient-to-br from-[#8b6914] to-[#523a00] text-center' >
+      <section className='py-20 bg-gradient-to-br from-[#8b6914] to-[#523a00] text-center' >
         <div className='mx-auto max-w-2xl px-4'>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -668,7 +667,7 @@ function App() {
       </section >
 
       {/* Footer */}
-      < footer className='bg-[#523a00] text-white/80 pt-16 pb-8' >
+      <footer className='bg-[#523a00] text-white/80 pt-16 pb-8' >
         <div className='mx-auto max-w-6xl px-4'>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
 
