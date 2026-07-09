@@ -29,6 +29,8 @@ const navLinks = [
   { href: '#avaliacoes', label: 'Avaliações' }
 ];
 
+const whatsappUrl = "https://wa.me/5544984645033?text=Olá%2C%20gostaria%20de%20fazer%20uma%20encomenda!";
+
 const listVariants = {
   hidden: {},
   visible: {
@@ -66,7 +68,7 @@ function App() {
               </a>
             ))}
             <a
-              href="https://wa.me/5544984645033"
+              href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               className='inline-flex items-center justify-center gap-2 rounded-full text-white bg-rose-400 px-6 py-3 font-medium hover:bg-rose-500 transition cursor-pointer'>
@@ -148,7 +150,7 @@ function App() {
               <div className='relative px-6 pb-8 pt-4 border-t border-rose-200 flex flex-col gap-3'>
 
                 <a
-                  href="https://wa.me/5544984645033"
+                  href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className='inline-flex items-center justify-center gap-2 rounded-2xl text-white bg-rose-400 px-6 py-3 font-medium hover:bg-rose-500 active:scale-95 transition-all'>
@@ -201,7 +203,7 @@ function App() {
               transition={{ duration: 0.5, delay: 1 }}
               className='mt-10 flex flex-row gap-3'
             >
-              <a href="https://wa.me/5544984645033"
+              <a href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer" className='inline-flex items-center justify-center gap-2 rounded-full text-white bg-rose-400 px-6 py-3 font-medium hover:bg-rose-500 transition cursor-pointer'>
                 Fazer Pedido
@@ -262,7 +264,7 @@ function App() {
               <div className='px-5 py-4 flex items-center justify-between'>
                 <p className='text-[#523a00] font-semibold text-sm'>Bolos personalizados</p>
                 <a
-                  href="https://wa.me/5544984645033"
+                  href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className='text-rose-400 border border-rose-300 rounded-full px-3 py-1 text-xs cursor-pointer hover:bg-rose-50 transition'>
@@ -409,7 +411,7 @@ function App() {
                     className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500'
                   />
                   <div className='absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center'>
-                    <a href="https://wa.me/5544984645033"
+                    <a href={whatsappUrl}
                       target="_blank"
                       rel="noopener noreferrer" className='opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 bg-rose-400 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-rose-500 cursor-pointer'>
                       Encomendar
@@ -651,7 +653,7 @@ function App() {
 
 
             <a
-              href="https://wa.me/5544984645033"
+              href={whatsappUrl}
               target='_blank'
               rel="noopener noreferrer"
               className='mt-8 inline-flex items-center gap-2 bg-[#fcc53a] text-[#523a00] px-8 py-4 rounded-full font-semibold hover:bg-[#ffd966] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300'
@@ -700,7 +702,7 @@ function App() {
               <ul className='mt-4 space-y-3 text-sm'>
                 <li>
                   <a
-                    href="https://wa.me/5544984645033"
+                    href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className='flex items-center gap-2 hover:text-[#fcc53a] transition-colors duration-300'
@@ -738,7 +740,7 @@ function App() {
         </div>
       </footer >
       <a
-        href="https://wa.me/5544984645033"
+        href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
         className='fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300'
